@@ -38,6 +38,8 @@
     <modules>
         <module>service-nacos</module>
         <module>service-order-ribbon</module>
+        <module>service-order-ribbon-9006</module>
+        <module>service-order-openfeign</module>
         <module>service-order-stock</module>
         <module>service-order-stock-9004</module>
         <module>service-order</module>

@@ -1,0 +1,29 @@
+server:
+  port: 9007
+
+spring:
+  application:
+    name: service-order-openfeign
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.6.132:8848
+        username: nacos
+        password: nacos
+        namespace: public
+
+# openfeign配置包下（或指定哪些业务接口）以什么日志级别监听，springboot的默认日志级别是info，openFeign的日志级别debug就不会输出，所以需要加上此配置
+logging:
+  level:
+    com:
+     ever:
+      serviceorderopenfeign:
+       openfeign: debug
+
+#logging:
+#  level:
+#    com:
+#      ever:
+#        serviceorderopenfeign:
+#          openfeign:
+#            StockOpenFeignService: debug

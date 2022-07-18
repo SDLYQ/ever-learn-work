@@ -39,9 +39,9 @@ public class StockController {
      * @return
      */
     @RequestMapping("/subStock")
-    public String subStock(){
+    public String subStock() throws InterruptedException {
         System.out.println("库存扣减成功");
-
+        Thread.sleep(4000);
         return "库存服务-库存扣减成功 - 端口：" + port;
     }
 }
