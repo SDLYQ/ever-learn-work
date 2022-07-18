@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        username: nacos
+        password: nacos
+        context-path: /nacos
+        server-addr: 192.168.6.132:8848
+        file-extension: yaml
+        namespace:
+        refresh-enabled: true #动态刷新
