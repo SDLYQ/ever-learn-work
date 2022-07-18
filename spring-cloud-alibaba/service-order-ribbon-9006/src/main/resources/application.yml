@@ -1,0 +1,20 @@
+server:
+  port: 9006
+
+spring:
+  application:
+    name: service-order-ribbon
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.6.132:8848
+        username: nacos
+        password: nacos
+        namespace: public
+
+
+#方式2：负载均衡配置文件
+#指定使用Nacos提供的负载均衡策略（优先调用同一集群实例，基于随机和权重）
+service-order-stock:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
