@@ -35,6 +35,10 @@
         </dependency>
     </dependencies>
 
+    <modules>
+        <module>service-nacos</module>
+    </modules>
+
     <!-- 版本依赖管理器 -->
     <dependencyManagement>
         <dependencies>
