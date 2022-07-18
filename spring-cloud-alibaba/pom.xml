@@ -37,6 +37,9 @@
 
     <modules>
         <module>service-nacos</module>
+        <module>service-order-stock</module>
+        <module>service-order-stock-9004</module>
+        <module>service-order</module>
     </modules>
 
     <!-- 版本依赖管理器 -->
