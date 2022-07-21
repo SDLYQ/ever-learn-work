@@ -1,0 +1,13 @@
+server:
+  port: 9010
+
+spring:
+  application:
+    name: service-sentinel
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 192.168.6.132:8080 # Sentinel 控制台地址
+        # 默认情况下 Sentinel 会在客户端首次调用的时候进行初始化，开始向控制台发送心跳包
+        # 配置 sentinel.eager=true 时，取消Sentinel控制台懒加载功能
+      eager: false
