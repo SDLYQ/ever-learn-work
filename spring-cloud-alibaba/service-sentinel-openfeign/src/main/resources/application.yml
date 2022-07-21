@@ -1,0 +1,33 @@
+server:
+  port: 9011
+
+spring:
+  application:
+    name: service-sentinel-openfeign
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 192.168.6.132:8080 # Sentinel 控制台地址
+        # 默认情况下 Sentinel 会在客户端首次调用的时候进行初始化，开始向控制台发送心跳包
+        #默认8719，假如被占用了会自动从8719开始依次+1扫描。直至找到未被占用的端口
+        port: 8719
+        # 配置 sentinel.eager=true 时，取消Sentinel控制台懒加载功能
+      eager: false
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 192.168.6.132:8848
+            dataId: service-sentinel-openfeign
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+    nacos:
+      discovery:
+        username: nacos
+        password: nacos
+        server-addr: 192.168.6.132:8848
+        namespace: public
+
+feign:
+  sentinel:
+    enabled: true
